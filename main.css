@@ -23,7 +23,7 @@ text {
     text-transform: uppercase;
     font-variant-ligatures: none;
     letter-spacing: 6px;
-    animation: rotate 25s linear infinite;
+    animation: rotate 30s linear infinite;
     transform-origin: 250px 250px;
 }
 
@@ -69,10 +69,10 @@ h2{
 }
 .contact{
     border: 1px solid #2b2828;
-    border-radius:15px;
+    border-radius:10px;
     font-size:1.25rem;
     font-weight:bolder;
-    padding:15px;
+    padding:8px;
     animation: background-change 15s alternate infinite;
 }
 @keyframes background-change{
