@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre&family=PT+Sans&display=swap');
+html{
+    --ratio: 1.4;
 
+    --size-1: calc(1rem * var(--ratio));
+    --size-2: calc(var(--size-1)*var(--ratio));
+    --size-3: calc(var(--size-2)*var(--ratio));
+
+    font-family: 'PT Sans', sans-serif;
+}
 body {
     background-color: rgb(55, 55, 58);
     color: #f5eeee;
     display: grid;
-    font-family: 'PT Sans', sans-serif;
     place-items: center;
 }
 
@@ -49,10 +56,14 @@ svg:hover .textcircle {
 }
 h1{
     font-family: 'Averia Serif Libre', cursive;
-    font-size:2.5rem;
+    font-size:var(--size-3);
+}
+h2{
+    font-size:var(--size-2);
 }
 .train-list{
     color:#f5eeee;
+    font-size: clamp(16px, 2.5vmin, 21px);
     list-style-type:none;
     padding:5px;
 }
@@ -72,4 +83,26 @@ h1{
         background-color:#868282;
         color:#1d1b1b;
     }
+}
+h3{
+    font-size:var(--size-1);
+    margin:1rem 0 0 5px;
+}
+.about-bio{
+    font-size: 18px;
+    font-size: clamp(16px, 2.5vmin, 21px);
+    margin:1rem auto;
+    max-width:35em;
+    padding:5px 2rem 5px 2rem;
+}
+form{
+    display:flex;
+    flex-direction:column;
+}
+input{
+    margin-bottom:15px;
+}
+.submit{
+    width:fit-content;
+    margin:1rem auto;
 }
